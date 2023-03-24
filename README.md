@@ -38,3 +38,4 @@
 
 - 💡 Inceptor/Product Owner : [`adriens`](https://dev.to/adriens)
 - 🤓 Developer : [Flavien Loubriat](https://www.linkedin.com/in/flavien-loubriat-16834224b/)
+- 🎓 [Université de la Nouvelle Calédonie](https://unc.nc/)
