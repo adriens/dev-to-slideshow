@@ -1,4 +1,4 @@
-# ❔ ABout
+# ❔ About
 
 > "A web and reponsive API driven slideshow for DEV.to fans."
 
