@@ -2,6 +2,11 @@
 
 > "A web and reponsive API driven slideshow for DEV.to fans."
 
+## 🪝 Video pitch
+
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/uOH1cjQVtIQ/0.jpg)](https://www.youtube.com/watch?v=uOH1cjQVtIQ)
+
 
 # 🎯 Target features
 
