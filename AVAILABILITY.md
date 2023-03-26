@@ -1,6 +1,6 @@
 # 📅 Availabilities
 
-## 👦 Florian
+## 👦 Flavien
 
 - **Lundi** avant 10h
 - **Mardi** de 12h à 15h45
