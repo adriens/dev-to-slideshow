@@ -2,8 +2,16 @@
     <div class="slide-show-container">
         <transition :name="transitionName" mode="out-in">
             <div :key="currentRow + '-' + currentColumn" class="slide-wrapper">
-                <img :src="slideMatrix[currentRow][currentColumn].img" alt="Slide" class="slide-image" />
-                <component :is="slideMatrix[currentRow][currentColumn].component" :someProp="someValue" />
+                <template v-if="slideMatrix[currentRow][currentColumn].img">
+                    <img :src="slideMatrix[currentRow][currentColumn].img" alt="Slide" class="slide-image" />
+                </template>
+                <template v-else>
+                    <div class="slide-color"></div>
+                </template>
+
+                <div class="custom-component-wrapper">
+                    <component :is="slideMatrix[currentRow][currentColumn].component" :someProp="someValue" />
+                </div>
             </div>
         </transition>
 
@@ -110,6 +118,15 @@ export default {
     height: 100vh;
 }
 
+.slide-color {
+    background-color: rgb(45, 45, 45);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 .slide-image {
     position: absolute;
     top: 0;
@@ -174,6 +191,22 @@ export default {
     left: 100%;
     top: 50%;
     transform: translate(-100px, -50%);
+}
+
+.custom-component-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 .slide-left-enter-active,

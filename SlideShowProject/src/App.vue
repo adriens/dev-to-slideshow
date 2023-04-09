@@ -6,6 +6,7 @@
 
 <script>
 import SlideShow from "./components/SlideShow.vue";
+import APS1_Projet from "./assets/images/APS1_Projet.jpg"
 export default {
   name: "App",
   components: {
@@ -16,12 +17,12 @@ export default {
       slideMatrix: [[
         {
           img:
-            "https://images.unsplash.com/photo-1679978677453-9452668cb867?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDF8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+            APS1_Projet,
           component: "CustomComponents1",
         },
         {
           img:
-            "https://images.unsplash.com/photo-1679946026929-454c89c3af10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+            "",
           component: "CustomComponents2",
         }],
       [{
@@ -44,6 +45,6 @@ export default {
 .slide-show {
   width: 100%;
   height: 100vh;
-  background-color: aquamarine;
+  background-color: rgb(45, 45, 45);
 }
 </style>
