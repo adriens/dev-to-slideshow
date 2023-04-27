@@ -7,6 +7,7 @@
 <script>
 import SlideShow from "./components/SlideShow.vue";
 import APS1_Projet from "./assets/images/APS1_Projet.jpg"
+import APS2_OPTNC from "./assets/images/APS2_OPTNC.jpg"
 export default {
   name: "App",
   components: {
@@ -22,7 +23,7 @@ export default {
         },
         {
           img:
-            "",
+            APS2_OPTNC,
           component: "CustomComponents2",
         }],
       [{

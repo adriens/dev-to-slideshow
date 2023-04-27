@@ -45,6 +45,9 @@
                 </div>
             </button>
         </div>
+        <div class="progress-bar">
+            <div class="progress" :style="{ width: progressPercentage + '%' }"></div>
+        </div>
     </div>
 </template>
   
@@ -69,10 +72,29 @@ export default {
             currentRow: 0,
             currentColumn: 0,
             transitionName: "slide-left",
+            autoplay: true,
         };
     },
+    mounted() {
+        this.init();
+        window.addEventListener("keydown", this.handleKeydown);
+    },
+    beforeUnmount() {
+        window.removeEventListener("keydown", this.handleKeydown);
+    },
+    computed: {
+        progressPercentage() {
+            const totalSlides = this.slideMatrix.flat().length;
+            const currentIndex = this.currentRow * this.slideMatrix[0].length + this.currentColumn;
+            return ((currentIndex + 1) / totalSlides) * 100;
+        },
+    },
     methods: {
+        init() {
+            this.startAutoplay();
+        },
         changeSlide(direction) {
+            this.stopAutoplay();
             switch (direction) {
                 case "left":
                     this.currentRow = 0;
@@ -96,6 +118,33 @@ export default {
                     this.transitionName = "slide-down";
                     break;
             }
+            this.startAutoplay();
+        },
+        handleKeydown(event) {
+            switch (event.key) {
+                case "ArrowLeft":
+                    this.changeSlide("left");
+                    break;
+                case "ArrowRight":
+                    this.changeSlide("right");
+                    break;
+                case "ArrowUp":
+                    this.changeSlide("up");
+                    break;
+                case "ArrowDown":
+                    this.changeSlide("down");
+                    break;
+            }
+        },
+        startAutoplay() {
+            if (this.autoplay) {
+                this.interval = setInterval(() => {
+                    this.changeSlide("right");
+                }, 5000);
+            }
+        },
+        stopAutoplay() {
+            clearInterval(this.interval);
         },
     },
 };
@@ -207,6 +256,21 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.progress {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.5s ease;
 }
 
 .slide-left-enter-active,
