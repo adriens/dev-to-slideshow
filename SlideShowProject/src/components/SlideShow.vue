@@ -10,41 +10,23 @@
                 </template>
 
                 <div class="custom-component-wrapper">
-                    <component :is="slideMatrix[currentRow][currentColumn].component" :someProp="someValue" />
+                    <component :is="slideMatrix[currentRow][currentColumn].component" />
                 </div>
             </div>
         </transition>
 
         <div class="nav-buttons">
-            <button class="arrow-button" @click="changeSlide('left')">
-                <div class="arrow-icon-container">
-                    <svg viewBox="0 0 24 24" class="arrow-icon">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                    </svg>
-                </div>
-            </button>
-            <button class="arrow-button" @click="changeSlide('up')">
-                <div class="arrow-icon-container">
-                    <svg viewBox="0 0 24 24" class="arrow-icon">
-                        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
-                    </svg>
-                </div>
-            </button>
-            <button class="arrow-button" @click="changeSlide('down')">
-                <div class="arrow-icon-container">
-                    <svg viewBox="0 0 24 24" class="arrow-icon">
-                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
-                    </svg>
-                </div>
-            </button>
-            <button class="arrow-button" @click="changeSlide('right')">
-                <div class="arrow-icon-container">
-                    <svg viewBox="0 0 24 24" class="arrow-icon">
-                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                    </svg>
-                </div>
-            </button>
+            <template v-for="(direction, index) in ['left', 'up', 'down', 'right']">
+                <button class="arrow-button" @click="changeSlide(direction)">
+                    <div class="arrow-icon-container">
+                        <svg viewBox="0 0 24 24" class="arrow-icon" :key="index">
+                            <path :d="arrowPath(direction)" />
+                        </svg>
+                    </div>
+                </button>
+            </template>
         </div>
+
         <div class="progress-bar">
             <div class="progress" :style="{ width: progressPercentage + '%' }"></div>
         </div>
@@ -119,6 +101,20 @@ export default {
                     break;
             }
             this.startAutoplay();
+        },
+        arrowPath(direction) {
+            switch (direction) {
+                case 'left':
+                    return "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z";
+                case 'up':
+                    return "M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z";
+                case 'down':
+                    return "M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z";
+                case 'right':
+                    return "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z";
+                default:
+                    return "";
+            }
         },
         handleKeydown(event) {
             switch (event.key) {
