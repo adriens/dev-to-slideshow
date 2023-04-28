@@ -1,6 +1,6 @@
 <template>
     <div class="custom-components">
-        <h1 class="titre">Display Slide 1 : Project details (static content, bullets, gh project ur,...)</h1>
+        <h1 class="title">Display Slide 1 : Project details (static content, bullets, gh project ur,...)</h1>
         <p>- Pitch du projet: En utilisant le langage HTML/JS avec n'importe quel framework, à l'exception de PHP, tel que
             Vue.js, Jekyll, React, nodejs ou Django, vous devrez créer un diaporama qui utilise une API pour présenter les
             articles produits par l'OPT. Ce diaporama devra être responsive, c'est-à-dire s'adapter aux différents types
@@ -52,7 +52,7 @@ export default {
     height: auto;
 }
 
-.titre {
+.title {
     text-align: center;
     font-weight: bold;
     padding-bottom: 10px;
