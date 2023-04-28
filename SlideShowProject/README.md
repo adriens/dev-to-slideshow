@@ -18,6 +18,8 @@ npm install
 
 ### Compile and Hot-Reload for Development
 
+Bien être dans le dossier SlideShowProject avant de lancer le serveur avec la commande suivante: 
+
 ```sh
 npm run dev
 ```
