@@ -54,21 +54,28 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
 
-```sh
-npm install
-```
+## Steps to follow to test the application 
 
-### Compile and Hot-Reload for Development
+### - Open Github Desktop
 
-Bien être dans le dossier SlideShowProject avant de lancer le serveur avec la commande suivante: 
+### - Clone the repository
+
+### - Open with text editor (recommended : Vscode)
+
+### - Open a new terminal in the root folder
+
+### - Write the commmande :
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### - Follow link generate (http://localhost:****/)
+
+### - Test !
+
+## Compile and Minify for Production
 
 ```sh
 npm run build
