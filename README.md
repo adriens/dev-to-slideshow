@@ -57,23 +57,23 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Steps to follow to test the application 
 
-### - Open Github Desktop
+ - Open Github Desktop
 
-### - Clone the repository
+ - Clone the repository
 
-### - Open with text editor (recommended : Vscode)
+ - Open with text editor (recommended : Vscode)
 
-### - Open a new terminal in the root folder
+ - Open a new terminal in the root folder
 
-### - Write the commmande :
+ - Write the commmande :
 
 ```sh
 npm run dev
 ```
 
-### - Follow link generate (http://localhost:****/)
+ - Follow link generate (http://localhost:****/)
 
-### - Test !
+ - Test !
 
 ## Compile and Minify for Production
 
