@@ -64,8 +64,14 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
  - Open with text editor (recommended : Vscode)
 
  - Open a new terminal in the root folder
+ 
+ - Write the commande :
 
- - Write the commmande :
+```sh
+npm install
+```
+
+ - Write the commande :
 
 ```sh
 npm run dev
