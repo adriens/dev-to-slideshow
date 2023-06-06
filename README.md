@@ -61,6 +61,8 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
  - Clone the repository
 
+ - Make sure you have the latest version of Node.js (if not, you can download it on https://nodejs.org/en/download)
+
  - Open with text editor (recommended : Vscode)
 
  - Open a new terminal in the root folder
