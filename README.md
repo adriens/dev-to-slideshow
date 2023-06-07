@@ -64,7 +64,7 @@ To verify, you can execute this commande :
 node -v
 ```
 
-If it's not the case you can download it on https://nodejs.org/en/download.
+If it's not the last version, you can download it on https://nodejs.org/en/download.
 
 ## Steps to follow to test the application 
 
