@@ -54,14 +54,23 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## ❗️ Prerequisite
+
+Have an up-to-date version of node.js.
+
+To verify, you can execute this commande : 
+
+```sh
+node -v
+```
+
+If it's not the case you can download it on https://nodejs.org/en/download.
 
 ## Steps to follow to test the application 
 
  - Open Github Desktop
 
  - Clone the repository
-
- - Make sure you have the latest version of Node.js (if not, you can download it on https://nodejs.org/en/download)
 
  - Open with text editor (recommended : Vscode)
 
