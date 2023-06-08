@@ -56,7 +56,7 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## ❗️ Prerequisite
 
-Have an up-to-date version of node.js.
+Have an up-to-date version of node.js. Minimum: v18.15.0
 
 To verify, you can execute this commande : 
 
@@ -64,7 +64,11 @@ To verify, you can execute this commande :
 node -v
 ```
 
-If it's not the last version, you can download it on https://nodejs.org/en/download.
+If it's not the last version, you can write this commande :
+
+```sh
+npm install -g npm@latest
+```
 
 ## Steps to follow to test the application 
 
