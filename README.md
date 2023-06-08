@@ -54,6 +54,21 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## ❗️ Prerequisite
+
+Have an up-to-date version of node.js. Minimum: v18.15.0
+
+To verify, you can execute this commande : 
+
+```sh
+node -v
+```
+
+If it's not the last version, you can write this commande :
+
+```sh
+npm install -g npm@latest
+```
 
 ## Steps to follow to test the application 
 
@@ -64,8 +79,14 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
  - Open with text editor (recommended : Vscode)
 
  - Open a new terminal in the root folder
+ 
+ - Write the commande :
 
- - Write the commmande :
+```sh
+npm install
+```
+
+ - Write the commande :
 
 ```sh
 npm run dev
